@@ -1,0 +1,42 @@
+{
+  "name": "@reverserid/iconscout-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for the Iconscout API: search and download icons, illustrations, 3D assets and Lottie animations",
+  "type": "module",
+  "main": "main.js",
+  "bin": {
+    "iconscout-mcp": "main.js"
+  },
+  "files": [
+    "main.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "iconscout",
+    "icons",
+    "illustrations",
+    "lottie"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "esbuild main.ts --format=esm --platform=node --target=node20 --outfile=main.js",
+    "prepack": "npm run build",
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "esbuild": "^0.28.1"
+  }
+}
