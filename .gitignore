@@ -4,3 +4,6 @@ main.js
 iconscout-downloads/
 .env
 .DS_Store
+stderr.txt
+*.log
+.env*.local
